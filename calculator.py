@@ -2,11 +2,31 @@
 
 # binary_to_decimal
 bin1 = "00000001"
-for i in str(bin1):
-    print(i)
+length = len(bin1) - 1
+for index, digit in enumerate(bin1):
+    print(f"Index: {index}, Digit: {digit}, Power: {length - index}")
+
+index0 = bin1[7]
+
+print(index0)
+   # 2 ** Power
+    
+    
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    # values = (f"Index: {index}, Digit: {digit}, Power: {length - index}")
 
 
 
