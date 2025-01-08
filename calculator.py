@@ -6,7 +6,8 @@ length = len(bin1) - 1
 for index, digit in enumerate(bin1):
     print(f"Index: {index}, Digit: {digit}, Power: {length - index}")
 
-index0 = bin1[7]
+index0 = bin1[0]
+index0 ** 
 
 print(index0)
    # 2 ** Power
