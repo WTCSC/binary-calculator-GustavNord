@@ -4,32 +4,31 @@
 bin1 = "00000001"
 length = len(bin1) - 1
 for index, digit in enumerate(bin1):
-    print(f"Index: {index}, Digit: {digit}, Power: {length - index}")
+    print(f"Index: {index}, Digit: {digit}, Power: {length - index}, Value: {2**(length - index)}")
 
-index0 = bin1[0]
-index0 ** 
+Error = "Error"
 
-print(index0)
-   # 2 ** Power
+value = {2**(length - index)}
+if digit == "0":
+    pass
+else:
+    if digit == "1":
+        digit = digit + value
+    else:
+        print(Error)
+
+print(digit)
+
+
+    # if digit is 1, add "Value ^" to a total, else if 0 do nothing, else return "Error"
+
+
+
+
+
+
+
     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # values = (f"Index: {index}, Digit: {digit}, Power: {length - index}")
-
-
 
     # decimal_to_binary = 
 
