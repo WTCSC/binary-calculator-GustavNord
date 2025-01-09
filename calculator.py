@@ -1,7 +1,7 @@
 # def binary_calculator(bin1, bin2, operator):
 
 # binary_to_decimal
-operator = "+"
+operator = "/"
 bin1 = "01000001"
 Error = "Error"
 total = 0
@@ -33,7 +33,25 @@ for index2, digit2 in enumerate(bin2):
           print(Error)
           exit()
 
-print(total, operator, total2)
+# Operator
+if operator == "+":
+    totalwitplus = total + total2
+    print(totalwitplus)
+else:
+    if operator == "-":
+            totalwitminus = total - total2
+            print(totalwitminus)
+    else:
+         if operator == "/":
+            totalwitdivide = total / total2
+            totalwitdivide = totalwitdivide.floor()
+            print(totalwitdivide)
+         else:
+            if operator == "*":
+                totalwitmultiply = total * total2
+                print(totalwitmultiply)
+
+
 
     # if digit is 1, add "Value ^" to a total, else if 0 do nothing, else return "Error"
 
