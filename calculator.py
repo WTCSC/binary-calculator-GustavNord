@@ -1,6 +1,7 @@
 # def binary_calculator(bin1, bin2, operator):
-import math
+
 # binary_to_decimal
+import math
 operator = "/"
 bin1 = "01000001"
 Error = "Error"
@@ -19,7 +20,7 @@ for index, digit in enumerate(bin1):
           print(Error)
           exit()
 
-bin2 = "01100001"
+bin2 = "00000000"
 length2 = len(bin2) - 1
 for index2, digit2 in enumerate(bin2):
     # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
@@ -42,19 +43,19 @@ else:
             thetotal = total - total2
             print(thetotal)
     else:
-         if operator == "/":
-            thetotal = total / total2
-            thetotal = math.floor(thetotal)
-            print(thetotal)
+         if operator == "/" and bin2 == ("00000000"):
+            print("NaN")
          else:
-            if operator == "*":
-                thetotal = total * total2
+            if operator == "/":
+                thetotal = total / total2
+                thetotal = math.floor(thetotal)
                 print(thetotal)
+            else:
+                if operator == "*":
+                    thetotal = total * total2
+                    print(thetotal)
 
-
-
-    # if digit is 1, add "Value ^" to a total, else if 0 do nothing, else return "Error"
-
+# decimal_to_binary 
 
 
 
@@ -63,11 +64,6 @@ else:
 
     
 
-    # decimal_to_binary = 
-
-    # answer.floor()
-    # if bin2 == "00000000" and operator = "/"
-    # return "NaN"
 
     # if answer > 256
     #return "Overflow"
