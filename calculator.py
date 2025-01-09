@@ -19,7 +19,7 @@ for index, digit in enumerate(bin1):
           print(Error)
           exit()
 
-bin2 = "01000001"
+bin2 = "01100001"
 length2 = len(bin2) - 1
 for index2, digit2 in enumerate(bin2):
     # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
@@ -35,21 +35,21 @@ for index2, digit2 in enumerate(bin2):
 
 # Operator
 if operator == "+":
-    totalwitplus = total + total2
-    print(totalwitplus)
+    thetotal = total + total2
+    print(thetotal)
 else:
     if operator == "-":
-            totalwitminus = total - total2
-            print(totalwitminus)
+            thetotal = total - total2
+            print(thetotal)
     else:
          if operator == "/":
-            totalwitdivide = total / total2
-            totalwitdivide = math.floor(totalwitdivide)
-            print(totalwitdivide)
+            thetotal = total / total2
+            thetotal = math.floor(thetotal)
+            print(thetotal)
          else:
             if operator == "*":
-                totalwitmultiply = total * total2
-                print(totalwitmultiply)
+                thetotal = total * total2
+                print(thetotal)
 
 
 
