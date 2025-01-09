@@ -1,5 +1,5 @@
 # def binary_calculator(bin1, bin2, operator):
-
+import math
 # binary_to_decimal
 operator = "/"
 bin1 = "01000001"
@@ -44,7 +44,7 @@ else:
     else:
          if operator == "/":
             totalwitdivide = total / total2
-            totalwitdivide = totalwitdivide.floor()
+            totalwitdivide = math.floor(totalwitdivide)
             print(totalwitdivide)
          else:
             if operator == "*":
