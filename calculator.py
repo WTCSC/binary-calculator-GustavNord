@@ -86,5 +86,6 @@ def binary_calculator(bin1, bin2, operator):
                 if thetotal >= 1:
                     response_list[7] = "1"
                     thetotal = thetotal - 1
+    # Joins the response list and returns response                
     response = ''.join(response_list)
     return response
