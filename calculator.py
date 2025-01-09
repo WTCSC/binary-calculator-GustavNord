@@ -1,9 +1,9 @@
 # def binary_calculator(bin1, bin2, operator):
 
-# binary_to_decimal
+# binary to decimal
 import math
 operator = "-"
-bin1 = "01000001"
+bin1 = "11001001"
 Error = "Error"
 total = 0
 total2 = 0
@@ -20,7 +20,7 @@ for index, digit in enumerate(bin1):
           print(Error)
           exit()
 
-bin2 = "01000001"
+bin2 = "00000001"
 length2 = len(bin2) - 1
 for index2, digit2 in enumerate(bin2):
     # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
@@ -59,13 +59,48 @@ else:
     else:
     #    print(thetotal)
 
-# decimal_to_binary 
+# Decimal to binary 
         response = "00000000"
-
+        response_list = list(response)
         if thetotal == 0:
             print(response)
         else:
+            if thetotal >= 128:
+                response_list[0] = "1"
+                thetotal = thetotal - 128
 
-            
+            if thetotal >= 64:
+                response_list[1] = "1"
+                thetotal = thetotal - 64
+                
+            if thetotal >= 32:
+                response_list[2] = "1"
+                thetotal = thetotal - 32
+                    
+            if thetotal >= 16:
+                response_list[3] = "1"
+                thetotal = thetotal - 16
+                        
+            if thetotal >= 8:
+                response_list[4] = "1"
+                thetotal = thetotal - 8
+                            
+            if thetotal >= 4:
+                response_list[5] = "1"
+                thetotal = thetotal - 4
+                               
+            if thetotal >= 2:
+                response_list[6] = "1"
+                thetotal = thetotal - 2
+                                    
+            if thetotal >= 1:
+                response_list[7] = "1"
+                thetotal = thetotal - 1
+
+                    
+response = ''.join(response_list)
+print(response)
+
+
             # 128 >= 128 - 128 = 0, 0 >= 64? no, move to the next (leave as "0"), 32, 16, 8, 4, 2, 1
             # if thetotal >= 128 then response[0] = "1", thetotal -= 128, 
