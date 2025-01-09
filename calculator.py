@@ -2,20 +2,20 @@
 
 # binary_to_decimal
 bin1 = "00000001"
+Error = "Error"
 length = len(bin1) - 1
 for index, digit in enumerate(bin1):
     print(f"Index: {index}, Digit: {digit}, Power: {length - index}, Value: {2**(length - index)}")
 
-Error = "Error"
-
-value = {2**(length - index)}
-if digit == "0":
-    pass
-else:
-    if digit == "1":
-        digit = digit + value
+    value = {2**(length - index)}
+    if digit == "0":
+     pass
     else:
-        print(Error)
+        if digit == "1":
+          digit = value
+        else:
+          print(Error)
+          exit()
 
 print(digit)
 
