@@ -20,7 +20,7 @@ for index, digit in enumerate(bin1):
           print(Error)
           exit()
 
-bin2 = "00000000"
+bin2 = "01000000"
 length2 = len(bin2) - 1
 for index2, digit2 in enumerate(bin2):
     # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
@@ -37,11 +37,9 @@ for index2, digit2 in enumerate(bin2):
 # Operator
 if operator == "+":
     thetotal = total + total2
-    print(thetotal)
 else:
     if operator == "-":
             thetotal = total - total2
-            print(thetotal)
     else:
          if operator == "/" and bin2 == ("00000000"):
             print("NaN")
@@ -49,11 +47,17 @@ else:
             if operator == "/":
                 thetotal = total / total2
                 thetotal = math.floor(thetotal)
-                print(thetotal)
             else:
                 if operator == "*":
                     thetotal = total * total2
-                    print(thetotal)
+
+if thetotal > 255:
+    print("Overflow")
+else:
+    if thetotal < 0:
+        print("Overflow")
+    else:
+        print(thetotal)
 
 # decimal_to_binary 
 
