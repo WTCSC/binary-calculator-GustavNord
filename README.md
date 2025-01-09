@@ -21,7 +21,7 @@ The function performs the operation on the two decimal numbers.
 
 Handles the Special Cases like attempt at dividing by zero or overflowing.
 
-If the results are within the range, (0-255), this function converts the number to an 8-bit binary string.
+If the results are within the range (0-255), this function converts the number to an 8-bit binary string.
 
 ## Requirements
 Python 3
