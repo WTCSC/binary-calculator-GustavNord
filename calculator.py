@@ -1,15 +1,10 @@
 def binary_calculator(bin1, bin2, operator):
-
-    # binary to decimal
     import math
-    operator = "-"
-    bin1 = "11001001"
     Error = "Error"
     total = 0
     total2 = 0
     length = len(bin1) - 1
     for index, digit in enumerate(bin1):
-    # print(f"Index: {index}, Digit: {digit}, Power: {length - index}, Value: {2**(length - index)}")
         value = 2**(length - index)
         if digit == "0":
             pass
@@ -17,13 +12,10 @@ def binary_calculator(bin1, bin2, operator):
             if digit == "1":
                 total = total + value
             else:
-                print(Error)
+                return Error
                 exit()
-
-    bin2 = "00000001"
     length2 = len(bin2) - 1
     for index2, digit2 in enumerate(bin2):
-        # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
         value2 = 2**(length2 - index2)
         if digit2 == "0":
             pass
@@ -31,10 +23,8 @@ def binary_calculator(bin1, bin2, operator):
             if digit2 == "1":
                 total2 = total2 + value2
             else:
-                print(Error)
+                return Error
                 exit()
-
-    # Operator
     if operator == "+":
         thetotal = total + total2
     else:
@@ -42,7 +32,7 @@ def binary_calculator(bin1, bin2, operator):
                 thetotal = total - total2
         else:
             if operator == "/" and bin2 == ("00000000"):
-                print("NaN")
+                return "NaN"
             else:
                 if operator == "/":
                     thetotal = total / total2
@@ -50,20 +40,16 @@ def binary_calculator(bin1, bin2, operator):
                 else:
                     if operator == "*":
                         thetotal = total * total2
-
     if thetotal > 255:
-        print("Overflow")
+        return "Overflow"
     else:
         if thetotal < 0:
-            print("Overflow")
+            return "Overflow"
         else:
-        #    print(thetotal)
-
-    # Decimal to binary 
             response = "00000000"
             response_list = list(response)
             if thetotal == 0:
-                print(response)
+                return response
             else:
                 if thetotal >= 128:
                     response_list[0] = "1"
@@ -96,9 +82,7 @@ def binary_calculator(bin1, bin2, operator):
                 if thetotal >= 1:
                     response_list[7] = "1"
                     thetotal = thetotal - 1
-
-                        
     response = ''.join(response_list)
-    print(response)
+    return response
 
 
