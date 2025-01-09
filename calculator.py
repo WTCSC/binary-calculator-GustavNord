@@ -1,8 +1,12 @@
 def binary_calculator(bin1, bin2, operator):
     import math
     Error = "Error"
+
+    # Setting the total values for both the binary inputs.
     total = 0
     total2 = 0
+
+    # 
     length = len(bin1) - 1
     for index, digit in enumerate(bin1):
         value = 2**(length - index)
@@ -84,5 +88,3 @@ def binary_calculator(bin1, bin2, operator):
                     thetotal = thetotal - 1
     response = ''.join(response_list)
     return response
-
-
