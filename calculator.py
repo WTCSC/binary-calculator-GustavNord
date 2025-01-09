@@ -60,5 +60,12 @@ else:
     #    print(thetotal)
 
 # decimal_to_binary 
+        response = "00000000"
+
         if thetotal == 0:
-            print("00000000")
+            print(response)
+        else:
+
+            
+            # 128 >= 128 - 128 = 0, 0 >= 64? no, move to the next (leave as "0"), 32, 16, 8, 4, 2, 1
+            # if thetotal >= 128 then response[0] = "1", thetotal -= 128, 
