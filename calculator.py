@@ -2,7 +2,7 @@
 
 # binary_to_decimal
 import math
-operator = "/"
+operator = "-"
 bin1 = "01000001"
 Error = "Error"
 total = 0
@@ -20,7 +20,7 @@ for index, digit in enumerate(bin1):
           print(Error)
           exit()
 
-bin2 = "01000000"
+bin2 = "01000001"
 length2 = len(bin2) - 1
 for index2, digit2 in enumerate(bin2):
     # print(f"Index: {index2}, Digit: {digit2}, Power: {length2 - index2}, Value: {2**(length2 - index2)}")
@@ -57,20 +57,8 @@ else:
     if thetotal < 0:
         print("Overflow")
     else:
-        print(thetotal)
+    #    print(thetotal)
 
 # decimal_to_binary 
-
-
-
-
-
-
-    
-
-
-    # if answer > 256
-    #return "Overflow"
-
-    # if answer < 0
-    # return "Overflow"
+        if thetotal == 0:
+            print("00000000")
