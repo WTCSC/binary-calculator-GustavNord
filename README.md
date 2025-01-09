@@ -25,6 +25,7 @@ If the results are within the range (0-255), this function converts the number t
 
 ## Requirements
 Python 3
+
 The `math` module, (should come with Python by default).
 
 
