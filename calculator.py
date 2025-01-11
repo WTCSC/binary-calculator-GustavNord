@@ -6,55 +6,59 @@ def binary_calculator(bin1, bin2, operator):
     total = 0
     total2 = 0
 
-    # 
+    # Converts bin1 to decimal.
     length = len(bin1) - 1
     for index, digit in enumerate(bin1):
-        value = 2**(length - index)
+        value = 2**(length - index) # Calculates Value.
         if digit == "0":
-            pass
+            pass # Skip if the digit is zero.
         else:
             if digit == "1":
-                total = total + value
+                total = total + value # Add the value if the digit is one.
             else:
-                return Error
+                return Error # Return an error if the digit is not a one or zero.
                 exit()
+        # Converts bin2 to decimal
     length2 = len(bin2) - 1
     for index2, digit2 in enumerate(bin2):
-        value2 = 2**(length2 - index2)
-        if digit2 == "0":
-            pass
+        value2 = 2**(length2 - index2) # Calculates Value for bin2.
+        if digit2 == "0": 
+            pass # Skips if the digit is zero.
         else:
             if digit2 == "1":
-                total2 = total2 + value2
+                total2 = total2 + value2 # Add the value if the digit is one.
             else:
-                return Error
+                return Error # Return an error if the digit is not a one or zero.
                 exit()
-    if operator == "+":
+    # Performs the arithmetic operation.
+    if operator == "+": # Addition.
         thetotal = total + total2
     else:
-        if operator == "-":
+        if operator == "-": # Subtraction.
                 thetotal = total - total2
         else:
-            if operator == "/" and bin2 == ("00000000"):
+            if operator == "/" and bin2 == ("00000000"): # Handles being devided by a zero.
                 return "NaN"
             else:
-                if operator == "/":
+                if operator == "/": # Division.
                     thetotal = total / total2
                     thetotal = math.floor(thetotal)
                 else:
-                    if operator == "*":
+                    if operator == "*": # Multiplication. 
                         thetotal = total * total2
-    if thetotal > 255:
+    if thetotal > 255: # Make sure it\s not an Overflow.
         return "Overflow"
     else:
-        if thetotal < 0:
+        if thetotal < 0: # Make sure it\s not an Overflow.
             return "Overflow"
         else:
+            # Creates a representation of the 8 bit binary string.
             response = "00000000"
             response_list = list(response)
             if thetotal == 0:
                 return response
             else:
+                # Sets the binary digits based on the total
                 if thetotal >= 128:
                     response_list[0] = "1"
                     thetotal = thetotal - 128
